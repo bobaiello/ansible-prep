@@ -3,13 +3,13 @@
 
 ### We verified the version of Ubuntu running
 ```
-> /etc$ cat lsb-release
+vagrant@ansctl: /etc$ cat lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=12.04
 DISTRIB_CODENAME=precise
 DISTRIB_DESCRIPTION="Ubuntu 12.04.5 LTS"
 
-> /etc$ lsb_release -cd
+vagrant@ansctl: /etc$ lsb_release -cd
 Description:    Ubuntu 12.04.5 LTS
 Codename:       precise
 vagrant@web:/etc$ exit
