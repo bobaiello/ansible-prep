@@ -1,23 +1,22 @@
-# ansible-prep
+# Bob Aiello
+## ansible-prep show the steps we took to prepare our ansible environment
 
-# We verified the version of Ubuntu running
+### We verified the version of Ubuntu running
 ```
-vagrant@web:/etc$ cat lsb-release
+> /etc$ cat lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=12.04
 DISTRIB_CODENAME=precise
 DISTRIB_DESCRIPTION="Ubuntu 12.04.5 LTS"
-```
 
-```
-vagrant@web:/etc$ lsb_release -cd
+> /etc$ lsb_release -cd
 Description:    Ubuntu 12.04.5 LTS
 Codename:       precise
 vagrant@web:/etc$ exit
 logout
 Connection to 127.0.0.1 closed.
 ```
-# Then we install ansible on ansctl
+### Then we install ansible on ansctl
 
 ```
 $ sudo apt-get update
@@ -27,7 +26,8 @@ $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
 
-#we created ssh keys and then copied to both servers
+### We created ssh keys and then copied to both servers
+
 ```
 vagrant@ansctl:~/ansible_work$ ssh-keygen
 Generating public/private rsa key pair.
@@ -50,10 +50,9 @@ The key's randomart image is:
 |                 |
 |                 |
 +-----------------+
-
 ```
 
-# You will want to update /etc/hosts with the IP address and name of the host
+### You will want to update /etc/hosts with the IP address and name of the host
 ```
 agrant@ansctl:~/ansible_work$ cat /etc/hosts
 127.0.1.1       ansctl  ansctl
@@ -62,7 +61,7 @@ agrant@ansctl:~/ansible_work$ cat /etc/hosts
 192.168.100.101 web
 ```
 
-# Then you can copy the shared keys to the servers that ansible should accessing
+### Then you can copy the shared keys to the servers that ansible should accessing
 
 ```
 vagrant@ansctl:~/ansible_work$ ssh-copy-id web
