@@ -1,6 +1,7 @@
 # ansible-prep
 
 # We verified the version of Ubuntu running
+```
 vagrant@web:/etc$ cat lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=12.04
@@ -62,8 +63,8 @@ agrant@ansctl:~/ansible_work$ cat /etc/hosts
 ```
 
 # Then you can copy the shared keys to the servers that ansible should accessing
-```
 
+```
 vagrant@ansctl:~/ansible_work$ ssh-copy-id web
 The authenticity of host 'web (192.168.100.101)' can't be established.
 ECDSA key fingerprint is dc:db:44:40:88:ab:34:d8:0f:40:b6:3d:1a:da:94:b7.
